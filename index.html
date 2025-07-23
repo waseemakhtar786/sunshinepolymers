@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sunshine Polymers | Plastic Granules Manufacturer</title>
     <meta name="description" content="Sunshine Polymers in Pune is a leading manufacturer of high-quality recycled HDPE, LDPE granules, and plastic scrap. Contact us for sustainable polymer solutions.">
-     <!-- ADD THIS LINE HERE TO REMOVE THE FAVICON -->
-    <!-- <link rel="icon" href="data:,">  -->
-     <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -123,7 +121,6 @@
             cursor: pointer;
         }
         
-        /* --- MODIFICATION START: Updated Hero Section Styles --- */
         .hero {
             height: 100vh;
             position: relative;
@@ -133,7 +130,7 @@
             color: white;
             text-align: center;
             padding: 80px 20px 0;
-            overflow: hidden; /* Important to hide overflowing parts of images */
+            overflow: hidden;
         }
         
         .hero-bg-slider {
@@ -154,32 +151,14 @@
             background-size: cover;
             background-position: center center;
             opacity: 0;
-            /* Animation applied to each background */
             animation: heroSlider 24s linear infinite; 
-            transform: scale(1.1); /* Start slightly zoomed in */
+            transform: scale(1.1); 
         }
 
-        /* New, industry-relevant images for the slider */
-        .hero-bg:nth-child(1) { 
-            background-image: url('images/hero1.jpg'); 
-            animation-delay: 0s; 
-        }
-        .hero-bg:nth-child(2) { 
-            background-image: url('images/hero2.jpg'); 
-            animation-delay: 6s; 
-        }
-        .hero-bg:nth-child(3) { 
-            background-image: url('images/hero3.jpg'); 
-            animation-delay: 12s; 
-        }
-        .hero-bg:nth-child(4) { 
-            background-image: url('images/hero4.jpg'); 
-            animation-delay: 18s; 
-        }
-        /* .hero-bg:nth-child(5) { 
-            background-image: url('images/header3.jpg'); 
-            animation-delay: 0s; 
-        } */
+        .hero-bg:nth-child(1) { background-image: url('images/hero1.jpg'); animation-delay: 0s; }
+        .hero-bg:nth-child(2) { background-image: url('images/hero2.jpg'); animation-delay: 6s; }
+        .hero-bg:nth-child(3) { background-image: url('images/hero3.jpg'); animation-delay: 12s; }
+        .hero-bg:nth-child(4) { background-image: url('images/hero4.jpg'); animation-delay: 18s; }
 
         .hero-overlay {
             position: absolute;
@@ -187,35 +166,22 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.6); /* Slightly darker overlay for better text contrast */
+            background: rgba(0, 0, 0, 0.6);
             z-index: -1;
         }
 
-        /* Updated Keyframes for a smooth cross-fade and slow zoom effect */
         @keyframes heroSlider {
-            0% { 
-                opacity: 0; 
-                transform: scale(1.1);
-            }
-            8% { 
-                opacity: 1; 
-            }
-            33% { 
-                opacity: 1; 
-                transform: scale(1.2); /* Zoom in during the slide's visibility */
-            }
-            41% { 
-                opacity: 0; 
-            }
-            100% { 
-                opacity: 0; 
-            }
+            0% { opacity: 0; transform: scale(1.1); }
+            8% { opacity: 1; }
+            33% { opacity: 1; transform: scale(1.2); }
+            41% { opacity: 0; }
+            100% { opacity: 0; }
         }
         
         .hero-content {
             max-width: 800px;
             margin: 0 auto;
-            position: relative; /* Keep content on top */
+            position: relative;
             z-index: 1;
             animation: fadeIn 1.5s ease-in-out;
         }
@@ -225,508 +191,121 @@
             to { opacity: 1; transform: translateY(0); }
         }
         
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            font-weight: 700;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background: var(--accent);
-            color: white;
-            border: none;
-            border-radius: 50px;
-            font-size: 1rem;
-            font-weight: 600;
-            text-decoration: none;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        .btn:hover {
-            background: #FF9100;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(255,109,0,0.3);
-        }
-        
-        .btn-outline {
-            background: transparent;
-            border: 2px solid white;
-            margin-left: 15px;
-        }
-        
-        .btn-outline:hover {
-            background: white;
-            color: var(--dark);
-            box-shadow: 0 10px 20px rgba(255,255,255,0.2);
-        }
-        /* --- MODIFICATION END --- */
+        .hero h1 { font-size: 3.5rem; margin-bottom: 20px; font-weight: 700; text-shadow: 2px 2px 8px rgba(0,0,0,0.5); }
+        .hero p { font-size: 1.2rem; margin-bottom: 30px; text-shadow: 1px 1px 4px rgba(0,0,0,0.5); }
+        .btn { display: inline-block; padding: 12px 30px; background: var(--accent); color: white; border: none; border-radius: 50px; font-size: 1rem; font-weight: 600; text-decoration: none; cursor: pointer; transition: all 0.3s; }
+        .btn:hover { background: #FF9100; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(255,109,0,0.3); }
+        .btn-outline { background: transparent; border: 2px solid white; margin-left: 15px; }
+        .btn-outline:hover { background: white; color: var(--dark); box-shadow: 0 10px 20px rgba(255,255,255,0.2); }
 
-        /* About Section */
-        .section {
-            padding: 100px 0;
-        }
+        .section { padding: 100px 0; }
+        .section-title { text-align: center; margin-bottom: 60px; }
+        .section-title h2 { font-size: 2.5rem; color: var(--primary); position: relative; display: inline-block; }
+        .section-title h2:after { content: ''; position: absolute; width: 70px; height: 3px; background: var(--secondary); bottom: -10px; left: 50%; transform: translateX(-50%); }
         
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-        
-        .section-title h2 {
-            font-size: 2.5rem;
-            color: var(--primary);
-            position: relative;
-            display: inline-block;
-        }
-        
-        .section-title h2:after {
-            content: '';
-            position: absolute;
-            width: 70px;
-            height: 3px;
-            background: var(--secondary);
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        
-        .about-content {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        
-        .about-text {
-            flex: 1;
-            min-width: 300px;
-            padding-right: 40px;
-        }
-        
-        .about-text h3 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            color: var(--dark);
-        }
-        
-        .about-text p {
-            margin-bottom: 15px;
-        }
-        
-        .about-image {
-            flex: 1;
-            min-width: 300px;
-            position: relative;
-        }
-        
-        .about-image img {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 20px 30px rgba(0,0,0,0.1);
-            animation: float 6s ease-in-out infinite;
-        }
-        
-        @keyframes float {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0); }
-        }
-        
-        /* Features Section */
-        .features {
-            background: var(--light);
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-        
-        .feature-card {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: all 0.3s;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-        }
-        
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
+        .about-content { display: flex; align-items: center; flex-wrap: wrap; }
+        .about-text { flex: 1; min-width: 300px; padding-right: 40px; }
+        .about-text h3 { font-size: 1.8rem; margin-bottom: 20px; color: var(--dark); }
+        .about-text p { margin-bottom: 15px; }
+        .about-image { flex: 1; min-width: 300px; position: relative; }
+        .about-image img { width: 100%; border-radius: 10px; box-shadow: 0 20px 30px rgba(0,0,0,0.1); animation: float 6s ease-in-out infinite; }
+        @keyframes float { 0% { transform: translateY(0); } 50% { transform: translateY(-20px); } 100% { transform: translateY(0); } }
 
+        .features { background: var(--light); }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .feature-card { background: white; padding: 30px; border-radius: 10px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: all 0.3s; }
+        .feature-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        .feature-icon { font-size: 3rem; margin-bottom: 20px; }
         .feature-card:nth-child(1) .feature-icon { color: #FF6D00; }
         .feature-card:nth-child(2) .feature-icon { color: #00BFA5; }
         .feature-card:nth-child(3) .feature-icon { color: #2962FF; }
         .feature-card:nth-child(4) .feature-icon { color: #6A1B9A; }
+        .feature-card h3 { font-size: 1.5rem; margin-bottom: 15px; }
 
-        .feature-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-        }
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .product-card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: all 0.3s; }
+        .product-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        .product-image { height: 200px; overflow: hidden; }
+        .product-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+        .product-card:hover .product-image img { transform: scale(1.1); }
+        .product-info { padding: 20px; }
+        .product-info h3 { font-size: 1.3rem; margin-bottom: 10px; color: var(--primary); }
+        .product-info p { margin-bottom: 15px; color: #666; }
         
-        /* Products Section */
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-        
-        .product-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: all 0.3s;
-        }
-        
-        .product-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-        }
-        
-        .product-image {
-            height: 200px;
-            overflow: hidden;
-        }
-        
-        .product-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-        
-        .product-card:hover .product-image img {
-            transform: scale(1.1);
-        }
-        
-        .product-info {
-            padding: 20px;
-        }
-        
-        .product-info h3 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-            color: var(--primary);
-        }
-        
-        .product-info p {
-            margin-bottom: 15px;
-            color: #666;
-        }
-        
-        .product-specs {
-            margin-bottom: 15px;
-        }
-        
-        .product-specs span {
-            display: inline-block;
-            background: var(--light);
-            padding: 5px 10px;
-            border-radius: 5px;
-            margin-right: 5px;
-            margin-bottom: 5px;
-            font-size: 0.8rem;
-        }
-        
-        /* Contact Section Styles */
-        .contact {
-            background: var(--light);
-        }
-        
-        .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            gap: 50px;
-            align-items: flex-start;
-        }
-        
-        .contact-info h3 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            color: var(--primary);
-        }
-        
-        .contact-details {
-            margin-bottom: 30px;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 20px;
-        }
-        
-        .contact-icon {
-            font-size: 1.4rem; 
-            margin-right: 20px;
-            margin-top: 5px;
-            width: 25px;
-            text-align: center;
-        }
-        
+        .contact { background: var(--light); }
+        .contact-container { display: grid; grid-template-columns: 1fr 1.2fr; gap: 50px; align-items: flex-start; }
+        .contact-info h3 { font-size: 1.8rem; margin-bottom: 20px; color: var(--primary); }
+        .contact-details { margin-bottom: 30px; }
+        .contact-item { display: flex; align-items: flex-start; margin-bottom: 20px; }
+        .contact-icon { font-size: 1.4rem;  margin-right: 20px; margin-top: 5px; width: 25px; text-align: center; }
         .contact-item:nth-child(1) .contact-icon { color: #d32f2f; } 
         .contact-item:nth-child(2) .contact-icon { color: #388e3c; } 
         .contact-item:nth-child(3) .contact-icon { color: #1976d2; } 
         .contact-item:nth-child(4) .contact-icon { color: #25D366; } 
-
-        .contact-item p, .contact-item a {
-            text-decoration: none;
-            color: var(--dark);
-            transition: color 0.3s;
-        }
-
-        .contact-item a:hover {
-            color: var(--primary);
-        }
-
-        .map-container {
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        .map-container iframe {
-            display: block;
-            border: none;
-            width: 100%;
-            height: 450px;
-        }
+        .contact-item p, .contact-item a { text-decoration: none; color: var(--dark); transition: color 0.3s; }
+        .contact-item a:hover { color: var(--primary); }
+        .map-container { border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .map-container iframe { display: block; border: none; width: 100%; height: 450px; }
         
-        /* Footer */
-        footer {
-            background: var(--dark);
-            color: white;
-            padding: 60px 0 20px;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-        
-        .footer-column h3 {
-            font-size: 1.3rem;
-            margin-bottom: 20px;
-            color: white;
-            position: relative;
-            padding-bottom: 10px;
-        }
-        
-        .footer-column h3:after {
-            content: '';
-            position: absolute;
-            width: 40px;
-            height: 2px;
-            background: var(--secondary);
-            bottom: 0;
-            left: 0;
-        }
-        
-        .footer-links {
-            list-style: none;
-        }
-        
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-        
-        .footer-links a, .footer-contact-item {
-            color: #bbb;
-            text-decoration: none;
-            transition: color 0.3s, padding-left 0.3s;
-        }
-        
-        .footer-links a:hover {
-            color: white;
-            padding-left: 5px;
-        }
-
-        .footer-links a::before {
-            content: '→';
-            margin-right: 8px;
-            opacity: 0.7;
-            transition: margin-right 0.3s;
-        }
-        .footer-links a:hover::before {
-            margin-right: 12px;
-        }
-
-
+        footer { background: var(--dark); color: white; padding: 60px 0 20px; }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-bottom: 40px; }
+        .footer-column h3 { font-size: 1.3rem; margin-bottom: 20px; color: white; position: relative; padding-bottom: 10px; }
+        .footer-column h3:after { content: ''; position: absolute; width: 40px; height: 2px; background: var(--secondary); bottom: 0; left: 0; }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 10px; }
+        .footer-links a, .footer-contact-item { color: #bbb; text-decoration: none; transition: color 0.3s, padding-left 0.3s; }
+        .footer-links a:hover { color: white; padding-left: 5px; }
+        .footer-links a::before { content: '→'; margin-right: 8px; opacity: 0.7; transition: margin-right 0.3s; }
+        .footer-links a:hover::before { margin-right: 12px; }
         .footer-links i { margin-right: 8px; }
-        
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        
-        .social-links a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 50%;
-            color: white;
-            font-size: 1rem;
-            transition: all 0.3s;
-        }
-        
-        .social-links a:hover {
-            color: white !important;
-            transform: translateY(-3px);
-        }
+        .social-links { display: flex; gap: 15px; margin-top: 20px; }
+        .social-links a { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; color: white; font-size: 1rem; transition: all 0.3s; }
+        .social-links a:hover { color: white !important; transform: translateY(-3px); }
         .social-links a[href*="facebook.com"]:hover { background-color: #1877F2; }
         .social-links a[href*="twitter.com"]:hover { background-color: #000000; }
         .social-links a[href*="linkedin.com"]:hover { background-color: #0A66C2; }
         .social-links a[href*="instagram.com"]:hover { background-color: #C13584; }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: #bbb;
-            font-size: 0.9rem;
-        }
-
-        .floating-whatsapp {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 60px;
-            height: 60px;
-            background-color: #25D366;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-            z-index: 1000;
-            transition: all 0.3s;
-            text-decoration: none;
-        }
-        .floating-whatsapp:hover {
-            transform: scale(1.1);
-            box-shadow: 4px 4px 15px rgba(0,0,0,0.3);
-        }
-
-        /* Animations */
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
-        }
+        .footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); color: #bbb; font-size: 0.9rem; }
         
-        .animate-on-scroll.animated {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        .floating-whatsapp { position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background-color: #25D366; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 2px 2px 10px rgba(0,0,0,0.2); z-index: 1000; transition: all 0.3s; text-decoration: none; }
+        .floating-whatsapp:hover { transform: scale(1.1); box-shadow: 4px 4px 15px rgba(0,0,0,0.3); }
+
+        .animate-on-scroll { opacity: 0; transform: translateY(30px); transition: all 0.6s ease; }
+        .animate-on-scroll.animated { opacity: 1; transform: translateY(0); }
         
         /* Responsive Styles */
         @media (max-width: 992px) {
-            .hero h1 {
-                font-size: 2.8rem;
-            }
-            .contact-container {
-                grid-template-columns: 1fr;
-            }
+            .hero h1 { font-size: 2.8rem; }
+            .contact-container { grid-template-columns: 1fr; }
         }
         
         @media (max-width: 768px) {
-            .mobile-menu {
-                display: block;
-            }
+            .mobile-menu { display: block; }
+            .nav-links { position: fixed; top: 80px; left: -100%; width: 100%; height: calc(100vh - 80px); background: white; flex-direction: column; align-items: center; padding: 40px 0; transition: all 0.5s ease; }
+            header.scrolled .nav-links { top: 70px; height: calc(100vh - 70px); }
+            .nav-links.active { left: 0; }
+            .nav-links li { margin: 15px 0; }
+            .hero h1 { font-size: 2.5rem; }
             
-            .nav-links {
-                position: fixed;
-                top: 80px; /* Adjust if header padding changes on scroll */
-                left: -100%;
-                width: 100%;
-                height: calc(100vh - 80px);
-                background: white;
-                flex-direction: column;
-                align-items: center;
-                padding: 40px 0;
-                transition: all 0.5s ease;
-            }
-
-            header.scrolled .nav-links {
-                top: 70px; /* Adjust for scrolled header */
-                height: calc(100vh - 70px);
-            }
-            
-            .nav-links.active {
-                left: 0;
-            }
-            
-            .nav-links li {
-                margin: 15px 0;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
+            /* --- MODIFICATION: Image First on Mobile --- */
             .about-content {
-                flex-direction: column;
+                flex-direction: column-reverse; /* This flips the order on mobile */
             }
-            
             .about-text {
                 padding-right: 0;
-                margin-bottom: 40px;
+                margin-top: 40px; /* Use margin-top since text is now second */
+                margin-bottom: 0;
             }
-            .floating-whatsapp {
-                width: 50px;
-                height: 50px;
-                font-size: 1.5rem;
-                bottom: 20px;
-                right: 20px;
-            }
+
+            .floating-whatsapp { width: 50px; height: 50px; font-size: 1.5rem; bottom: 20px; right: 20px; }
         }
         
         @media (max-width: 576px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .hero p {
-                font-size: 1rem;
-            }
-            
-            .btn {
-                display: block;
-                width: 100%;
-                margin-bottom: 15px;
-            }
-            
-            .btn-outline {
-                margin-left: 0;
-            }
-            
-            .section-title h2 {
-                font-size: 2rem;
-            }
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+            .btn { display: block; width: 100%; margin-bottom: 15px; }
+            .btn-outline { margin-left: 0; }
+            .section-title h2 { font-size: 2rem; }
         }
     </style>
 </head>
@@ -736,7 +315,6 @@
         <div class="container">
             <nav>
                 <a href="index.html" class="logo" style="text-decoration: none;">
-                    <!-- <img src="logo.png" alt="Sunshine Polymers Pune Logo"> -->
                     <h1>Sunshine<span>Polymers</span></h1>
                 </a>
                 <ul class="nav-links">
@@ -779,6 +357,7 @@
             <div class="section-title">
                 <h2>About Us</h2>
             </div>
+            <!-- The order in HTML is text then image -->
             <div class="about-content">
                 <div class="about-text animate-on-scroll">
                     <h3>Sustainable. Strong. Trusted. Plastic Granules That Last.</h3>
@@ -802,30 +381,22 @@
             </div>
             <div class="features-grid">
                 <div class="feature-card animate-on-scroll">
-                    <div class="feature-icon">
-                        <i class="fas fa-award"></i>
-                    </div>
+                    <div class="feature-icon"><i class="fas fa-award"></i></div>
                     <h3>Premium Quality</h3>
                     <p>Every batch undergoes rigorous testing to ensure consistent quality that meets international standards.</p>
                 </div>
                 <div class="feature-card animate-on-scroll" style="transition-delay: 0.2s;">
-                    <div class="feature-icon">
-                        <i class="fas fa-truck"></i>
-                    </div>
+                    <div class="feature-icon"><i class="fas fa-truck"></i></div>
                     <h3>Timely Delivery</h3>
                     <p>Our efficient logistics network ensures your materials arrive on schedule, every time, across India.</p>
                 </div>
                 <div class="feature-card animate-on-scroll" style="transition-delay: 0.4s;">
-                    <div class="feature-icon">
-                        <i class="fas fa-tags"></i>
-                    </div>
+                    <div class="feature-icon"><i class="fas fa-tags"></i></div>
                     <h3>Competitive Pricing</h3>
                     <p>Direct-from-factory pricing without middlemen ensures you get the best value for your investment.</p>
                 </div>
                 <div class="feature-card animate-on-scroll" style="transition-delay: 0.6s;">
-                    <div class="feature-icon">
-                        <i class="fas fa-leaf"></i>
-                    </div>
+                    <div class="feature-icon"><i class="fas fa-leaf"></i></div>
                     <h3>Sustainable Solutions</h3>
                     <p>We are experts in plastic recycling, providing eco-friendly granules without compromising on quality.</p>
                 </div>
@@ -841,58 +412,34 @@
             </div>
             <div class="products-grid">
                 <div class="product-card animate-on-scroll">
-                    <div class="product-image">
-                        <img src="images/HDPE.jpg" alt="HDPE Granules">
-                    </div>
+                    <div class="product-image"><img src="images/HDPE.jpg" alt="HDPE Granules"></div>
                     <div class="product-info">
                         <h3>HDPE Granules</h3>
                         <p>Durable, high-density polyethylene for pipes, containers, and industrial applications.</p>
-                        <div class="product-specs">
-                            <!-- <span>Recycled & Virgin</span> -->
-                            <!-- <span>Multiple Colors</span> -->
-                        </div>
                         <a href="contact.html" class="btn" style="padding: 8px 20px; font-size: 0.9rem;">Inquire Now</a>
                     </div>
                 </div>
                 <div class="product-card animate-on-scroll" style="transition-delay: 0.2s;">
-                    <div class="product-image">
-                        <img src="images/LLDPE.jpg" alt="LDPE Granules">
-                    </div>
+                    <div class="product-image"><img src="images/LLDPE.jpg" alt="LDPE Granules"></div>
                     <div class="product-info">
                         <h3>LDPE Granules</h3>
                         <p>Flexible, low-density polyethylene ideal for film applications, bags, and liners.</p>
-                         <div class="product-specs">
-                            <!-- <span>Film Grade</span> -->
-                            <!-- <span>Transparent/Colored</span> -->
-                        </div>
                         <a href="contact.html" class="btn" style="padding: 8px 20px; font-size: 0.9rem;">Inquire Now</a>
                     </div>
                 </div>
                 <div class="product-card animate-on-scroll" style="transition-delay: 0.4s;">
-                    <div class="product-image">
-                        <img src="images/PP.jpg" alt="PP Granules">
-                    </div>
+                    <div class="product-image"><img src="images/PP.jpg" alt="PP Granules"></div>
                     <div class="product-info">
                         <h3>PP Granules</h3>
                         <p>Versatile Polypropylene with excellent heat resistance for automotive and household goods.</p>
-                         <div class="product-specs">
-                            <!-- <span>Homo/Copolymer</span> -->
-                            <!-- <span>Injection Grade</span> -->
-                        </div>
                         <a href="contact.html" class="btn" style="padding: 8px 20px; font-size: 0.9rem;">Inquire Now</a>
                     </div>
                 </div>
                 <div class="product-card animate-on-scroll" style="transition-delay: 0.6s;">
-                    <div class="product-image">
-                        <img src="images/Plastic Scrap.jpg" alt="Recycled Plastic Scrap">
-                    </div>
+                    <div class="product-image"><img src="images/Plastic Scrap.jpg" alt="Recycled Plastic Scrap"></div>
                     <div class="product-info">
                         <h3>Plastic Scrap</h3>
                         <p>High-quality, sorted plastic scrap for recycling and reprocessing industries.</p>
-                        <div class="product-specs">
-                            <!-- <span>Post-Industrial</span> -->
-                            <!-- <span>Sorted Bales</span> -->
-                        </div>
                         <a href="contact.html" class="btn" style="padding: 8px 20px; font-size: 0.9rem;">Inquire Now</a>
                     </div>
                 </div>
@@ -909,6 +456,7 @@
             <div class="section-title">
                 <h2>Quality & Standards</h2>
             </div>
+            <!-- The order in HTML is text then image -->
             <div class="about-content">
                 <div class="about-text animate-on-scroll">
                     <h3>Our Commitment to Excellence</h3>
@@ -1032,7 +580,6 @@
 
     <!-- JavaScript -->
     <script>
-        // Mobile Menu Toggle
         const mobileMenu = document.querySelector('.mobile-menu');
         const navLinks = document.querySelector('.nav-links');
         const header = document.getElementById('header');
@@ -1043,7 +590,6 @@
             mobileMenu.querySelector('i').classList.toggle('fa-times', isMenuOpen);
         });
         
-        // Close mobile menu when clicking a link
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 if(window.innerWidth <= 768) {
@@ -1054,7 +600,6 @@
             });
         });
         
-        // Header scroll effect
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
                 header.classList.add('scrolled');
@@ -1063,23 +608,15 @@
             }
         });
         
-        // Scroll animation
         const animateElements = document.querySelectorAll('.animate-on-scroll');
-        
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('animated');
                 }
             });
-        }, {
-            threshold: 0.1
-        });
-        
-        animateElements.forEach(element => {
-            observer.observe(element);
-        });
-        
+        }, { threshold: 0.1 });
+        animateElements.forEach(element => { observer.observe(element); });
     </script>
 </body>
 </html>
