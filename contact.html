@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Sunshine Polymers | Plastic Granules Manufacturer in Pune</title>
+    <meta name="description" content="Contact Sunshine Polymers in Chikhali, Pune. Find our address, phone number (8530441195), email, and location on the map. We look forward to your inquiry.">
+    <link rel="icon" href="data:,"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2962FF;
+            --secondary: #00BFA5;
+            --accent: #FF6D00;
+            --dark: #263238;
+            --light: #ECEFF1;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Shared Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        header.scrolled { padding: 10px 0; background-color: rgba(255,255,255,0.98); }
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; }
+        .logo { display: flex; align-items: center; }
+        .logo img { height: 50px; margin-right: 10px; }
+        .logo h1 { font-size: 1.8rem; color: var(--primary); font-weight: 700; }
+        .logo span { color: var(--accent); }
+        .nav-links { display: flex; list-style: none; }
+        .nav-links li { margin-left: 30px; }
+        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 500; transition: color 0.3s; position: relative; }
+        .nav-links a:hover, .nav-links a.active { color: var(--primary); }
+        .nav-links a:after { content: ''; position: absolute; width: 0; height: 2px; background: var(--primary); bottom: -5px; left: 0; transition: width 0.3s; }
+        .nav-links a:hover:after, .nav-links a.active:after { width: 100%; }
+        .mobile-menu { display: none; font-size: 1.5rem; cursor: pointer; }
+        
+        /* Page Header Banner */
+        .page-header {
+            height: 45vh; min-height: 350px; position: relative; display: flex; align-items: center;
+            justify-content: center; color: white; text-align: center; padding-top: 80px; overflow: hidden;
+        }
+        .page-header h1 {
+            font-size: 3.5rem; font-weight: 700; text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            animation: fadeIn 1.5s ease-in-out; position: relative; z-index: 1;
+        }
+        .hero-bg-slider { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -2; }
+        .hero-bg {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover;
+            background-position: center center; opacity: 0; animation: heroSlider 24s linear infinite; transform: scale(1.1);
+        }
+        
+        .hero-bg:nth-child(1) { 
+            background-image: url('images/hero1.jpg'); 
+            animation-delay: 0s; 
+        }
+        .hero-bg:nth-child(2) { 
+            background-image: url('images/hero2.jpg'); 
+            animation-delay: 6s; 
+        }
+        .hero-bg:nth-child(3) { 
+            background-image: url('images/hero3.jpg'); 
+            animation-delay: 12s; 
+        }
+        .hero-bg:nth-child(4) { 
+            background-image: url('images/hero4.jpg'); 
+            animation-delay: 18s; 
+        }
+
+        .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); z-index: -1; }
+
+        @keyframes heroSlider { 0% { opacity: 0; transform: scale(1.1); } 8% { opacity: 1; } 33% { opacity: 1; transform: scale(1.2); } 41% { opacity: 0; } 100% { opacity: 0; } }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Contact Page Styles */
+        .section { padding: 100px 0; }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 50px;
+            align-items: flex-start;
+            background: #fff;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+        }
+
+        .contact-info-box h3 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .contact-info-box p {
+            margin-bottom: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+        
+        .contact-icon {
+            font-size: 1.5rem; 
+            margin-right: 20px;
+            margin-top: 5px;
+            width: 30px;
+            text-align: center;
+        }
+        .contact-item:nth-child(1) .contact-icon { color: #d32f2f; } 
+        .contact-item:nth-child(2) .contact-icon { color: #388e3c; } 
+        .contact-item:nth-child(3) .contact-icon { color: #1976d2; } 
+        .contact-item:nth-child(4) .contact-icon { color: #25D366; } 
+
+        .contact-item-text h4 {
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+            color: var(--dark);
+        }
+
+        .contact-item-text p, .contact-item-text a {
+            text-decoration: none;
+            color: #555;
+            transition: color 0.3s;
+            font-size: 1rem;
+        }
+        .contact-item-text a:hover {
+            color: var(--primary);
+        }
+        .map-container {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            height: 100%;
+            min-height: 400px;
+        }
+        .map-container iframe {
+            display: block; border: none; width: 100%; height: 100%;
+        }
+        
+        /* Footer */
+        footer { background: var(--dark); color: white; padding: 60px 0 20px; }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-bottom: 40px; }
+        .footer-column h3 { font-size: 1.3rem; margin-bottom: 20px; color: white; position: relative; padding-bottom: 10px; }
+        .footer-column h3:after { content: ''; position: absolute; width: 40px; height: 2px; background: var(--secondary); bottom: 0; left: 0; }
+        .footer-links { list-style: none; } .footer-links li { margin-bottom: 10px; }
+        .footer-links a, .footer-contact-item { color: #bbb; text-decoration: none; transition: color 0.3s, padding-left 0.3s; }
+        .footer-links a:hover { color: white; padding-left: 5px; } .footer-links a::before { content: '→'; margin-right: 8px; opacity: 0.7; transition: margin-right 0.3s; }
+        .footer-links a:hover::before { margin-right: 12px; } .footer-links i { margin-right: 8px; }
+        .footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); color: #bbb; font-size: 0.9rem; }
+        
+        .floating-whatsapp {
+            position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background-color: #25D366; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 2px 2px 10px rgba(0,0,0,0.2); z-index: 1000; transition: all 0.3s; text-decoration: none;
+        }
+        .floating-whatsapp:hover { transform: scale(1.1); box-shadow: 4px 4px 15px rgba(0,0,0,0.3); }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu { display: block; }
+            .nav-links { position: fixed; top: 80px; left: -100%; width: 100%; height: calc(100vh - 80px); background: white; flex-direction: column; align-items: center; padding: 40px 0; transition: all 0.5s ease; }
+            header.scrolled .nav-links { top: 70px; height: calc(100vh - 70px); }
+            .nav-links.active { left: 0; }
+            .nav-links li { margin: 15px 0; }
+            .page-header h1 { font-size: 2.5rem; }
+            .contact-grid {
+                padding: 30px 20px;
+            }
+            .floating-whatsapp { width: 50px; height: 50px; font-size: 1.5rem; bottom: 20px; right: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo" style="text-decoration: none;">
+                    <!-- <img src="logo.png" alt="Sunshine Polymers Pune Logo"> -->
+                    <h1>Sunshine<span>Polymers</span></h1>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="quality.html">Quality</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="hero-bg-slider">
+            <div class="hero-bg"></div>
+            <div class="hero-bg"></div>
+            <div class="hero-bg"></div>
+            <div class="hero-bg"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        <h1>Contact Us</h1>
+    </section>
+
+    <!-- Main Contact Section -->
+    <section class="section" style="background-color: var(--light);">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info-box">
+                    <h3>Get In Touch</h3>
+                    <p>We're ready to assist you. Whether you have a question, need a quote, or want to discuss a partnership, please use the details below to connect with us. Our team is always happy to help.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="contact-item-text">
+                                <h4>Our Address</h4>
+                                <p>Gat No. 15, Moi Road, Chikhali,<br>Pune-411062, India</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div class="contact-item-text">
+                                <h4>Call Us</h4>
+                                <a href="tel:+918530441195"><p>+91 85304 41195</p></a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                             <div class="contact-item-text">
+                                <h4>Email Us</h4>
+                                <a href="mailto:sunshinepolymers1@gmail.com"><p>sunshinepolymers1@gmail.com</p></a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                             <div class="contact-item-text">
+                                <h4>Chat on WhatsApp</h4>
+                                <a href="https://wa.me/918530441195" target="_blank" rel="noopener noreferrer"><p>+91 85304 41195</p></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15121.714652431792!2d73.8055273!3d18.6449171!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9d992160d19%3A0x46513f355bafa47a!2sSunshine%20Polymers!5e0!3m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Sunshine Polymers</h3>
+                    <p>A reputed name in the plastic recycling and granule manufacturing industry, based in Pune, India.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="quality.html">Quality</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Products</h3>
+                    <ul class="footer-links">
+                         <li><a href="products.html">HDPE & PP Granules</a></li>
+                         <li><a href="products.html">LDPE & LLDPE Granules</a></li>
+                         <li><a href="products.html">Plastic Scrap</a></li>
+                         <li><a href="contact.html">Custom Orders</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                     <ul class="footer-links">
+                        <li class="footer-contact-item"><i class="fas fa-map-marker-alt"></i> Chikhali, Pune-411062</li>
+                        <li class="footer-contact-item"><i class="fas fa-phone-alt"></i> +91 85304 41195</li>
+                        <li class="footer-contact-item"><i class="fas fa-envelope"></i> sunshinepolymers1@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Sunshine Polymers. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/918530441195" class="floating-whatsapp" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        mobileMenu.addEventListener('click', () => {
+            const isMenuOpen = navLinks.classList.toggle('active');
+            mobileMenu.querySelector('i').classList.toggle('fa-bars', !isMenuOpen);
+            mobileMenu.querySelector('i').classList.toggle('fa-times', isMenuOpen);
+        });
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                if(window.innerWidth <= 768) {
+                    navLinks.classList.remove('active');
+                    mobileMenu.querySelector('i').classList.add('fa-bars');
+                    mobileMenu.querySelector('i').classList.remove('fa-times');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
