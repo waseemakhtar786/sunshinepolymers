@@ -1,3 +1,4 @@
+<!-- ---- START OF FILE: index.html ---- -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,313 +9,13 @@
     <link rel="icon" href="data:;base64,iVBORw0KGgo=">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #2962FF;
-            --secondary: #00BFA5;
-            --accent: #FF6D00;
-            --dark: #263238;
-            --light: #ECEFF1;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-        
-        body {
-            font-family: 'Poppins', sans-serif;
-            color: var(--dark);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-        
-        /* Header Styles */
-        header {
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: fixed;
-            width: 100%;
-            z-index: 1000;
-            transition: all 0.3s ease;
-        }
-        
-        header.scrolled {
-            padding: 10px 0;
-            background-color: rgba(255,255,255,0.98);
-        }
-        
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo img {
-            height: 50px;
-            margin-right: 10px;
-        }
-        
-        .logo h1 {
-            font-size: 1.8rem;
-            color: var(--primary);
-            font-weight: 700;
-        }
-        
-        .logo span {
-            color: var(--accent);
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-        }
-        
-        .nav-links li {
-            margin-left: 30px;
-        }
-        
-        .nav-links a {
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 500;
-            transition: color 0.3s;
-            position: relative;
-        }
-        
-        .nav-links a:hover, .nav-links a.active {
-            color: var(--primary);
-        }
-        
-        .nav-links a:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            background: var(--primary);
-            bottom: -5px;
-            left: 0;
-            transition: width 0.3s;
-        }
-        
-        .nav-links a:hover:after, .nav-links a.active:after {
-            width: 100%;
-        }
-        
-        .mobile-menu {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-        
-        .hero {
-            height: 100vh;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-            padding: 80px 20px 0;
-            overflow: hidden;
-        }
-        
-        .hero-bg-slider {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -2;
-        }
-        
-        .hero-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center center;
-            opacity: 0;
-            animation: heroSlider 24s linear infinite; 
-            transform: scale(1.1); 
-        }
-
-        .hero-bg:nth-child(1) { background-image: url('images/hero1.jpg'); animation-delay: 0s; }
-        .hero-bg:nth-child(2) { background-image: url('images/hero2.jpg'); animation-delay: 6s; }
-        .hero-bg:nth-child(3) { background-image: url('images/hero3.jpg'); animation-delay: 12s; }
-        .hero-bg:nth-child(4) { background-image: url('images/hero4.jpg'); animation-delay: 18s; }
-
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6);
-            z-index: -1;
-        }
-
-        @keyframes heroSlider {
-            0% { opacity: 0; transform: scale(1.1); }
-            8% { opacity: 1; }
-            33% { opacity: 1; transform: scale(1.2); }
-            41% { opacity: 0; }
-            100% { opacity: 0; }
-        }
-        
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-            animation: fadeIn 1.5s ease-in-out;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .hero h1 { font-size: 3.5rem; margin-bottom: 20px; font-weight: 700; text-shadow: 2px 2px 8px rgba(0,0,0,0.5); }
-        .hero p { font-size: 1.2rem; margin-bottom: 30px; text-shadow: 1px 1px 4px rgba(0,0,0,0.5); }
-        .btn { display: inline-block; padding: 12px 30px; background: var(--accent); color: white; border: none; border-radius: 50px; font-size: 1rem; font-weight: 600; text-decoration: none; cursor: pointer; transition: all 0.3s; }
-        .btn:hover { background: #FF9100; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(255,109,0,0.3); }
-        .btn-outline { background: transparent; border: 2px solid white; margin-left: 15px; }
-        .btn-outline:hover { background: white; color: var(--dark); box-shadow: 0 10px 20px rgba(255,255,255,0.2); }
-
-        .section { padding: 100px 0; }
-        .section-title { text-align: center; margin-bottom: 60px; }
-        .section-title h2 { font-size: 2.5rem; color: var(--primary); position: relative; display: inline-block; }
-        .section-title h2:after { content: ''; position: absolute; width: 70px; height: 3px; background: var(--secondary); bottom: -10px; left: 50%; transform: translateX(-50%); }
-        
-        .about-content { display: flex; align-items: center; flex-wrap: wrap; }
-        .about-text { flex: 1; min-width: 300px; padding-right: 40px; }
-        .about-text h3 { font-size: 1.8rem; margin-bottom: 20px; color: var(--dark); }
-        .about-text p { margin-bottom: 15px; }
-        .about-image { flex: 1; min-width: 300px; position: relative; }
-        .about-image img { width: 100%; border-radius: 10px; box-shadow: 0 20px 30px rgba(0,0,0,0.1); animation: float 6s ease-in-out infinite; }
-        @keyframes float { 0% { transform: translateY(0); } 50% { transform: translateY(-20px); } 100% { transform: translateY(0); } }
-
-        .features { background: var(--light); }
-        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
-        .feature-card { background: white; padding: 30px; border-radius: 10px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: all 0.3s; }
-        .feature-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
-        .feature-icon { font-size: 3rem; margin-bottom: 20px; }
-        .feature-card:nth-child(1) .feature-icon { color: #FF6D00; }
-        .feature-card:nth-child(2) .feature-icon { color: #00BFA5; }
-        .feature-card:nth-child(3) .feature-icon { color: #2962FF; }
-        .feature-card:nth-child(4) .feature-icon { color: #6A1B9A; }
-        .feature-card h3 { font-size: 1.5rem; margin-bottom: 15px; }
-
-        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
-        .product-card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: all 0.3s; }
-        .product-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
-        .product-image { height: 200px; overflow: hidden; }
-        .product-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
-        .product-card:hover .product-image img { transform: scale(1.1); }
-        .product-info { padding: 20px; }
-        .product-info h3 { font-size: 1.3rem; margin-bottom: 10px; color: var(--primary); }
-        .product-info p { margin-bottom: 15px; color: #666; }
-        
-        .contact { background: var(--light); }
-        .contact-container { display: grid; grid-template-columns: 1fr 1.2fr; gap: 50px; align-items: flex-start; }
-        .contact-info h3 { font-size: 1.8rem; margin-bottom: 20px; color: var(--primary); }
-        .contact-details { margin-bottom: 30px; }
-        .contact-item { display: flex; align-items: flex-start; margin-bottom: 20px; }
-        .contact-icon { font-size: 1.4rem;  margin-right: 20px; margin-top: 5px; width: 25px; text-align: center; }
-        .contact-item:nth-child(1) .contact-icon { color: #d32f2f; } 
-        .contact-item:nth-child(2) .contact-icon { color: #388e3c; } 
-        .contact-item:nth-child(3) .contact-icon { color: #1976d2; } 
-        .contact-item:nth-child(4) .contact-icon { color: #25D366; } 
-        .contact-item p, .contact-item a { text-decoration: none; color: var(--dark); transition: color 0.3s; }
-        .contact-item a:hover { color: var(--primary); }
-        .map-container { border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        .map-container iframe { display: block; border: none; width: 100%; height: 450px; }
-        
-        footer { background: var(--dark); color: white; padding: 60px 0 20px; }
-        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-bottom: 40px; }
-        .footer-column h3 { font-size: 1.3rem; margin-bottom: 20px; color: white; position: relative; padding-bottom: 10px; }
-        .footer-column h3:after { content: ''; position: absolute; width: 40px; height: 2px; background: var(--secondary); bottom: 0; left: 0; }
-        .footer-links { list-style: none; }
-        .footer-links li { margin-bottom: 10px; }
-        .footer-links a, .footer-contact-item { color: #bbb; text-decoration: none; transition: color 0.3s, padding-left 0.3s; }
-        .footer-links a:hover { color: white; padding-left: 5px; }
-        .footer-links a::before { content: '→'; margin-right: 8px; opacity: 0.7; transition: margin-right 0.3s; }
-        .footer-links a:hover::before { margin-right: 12px; }
-        .footer-links i { margin-right: 8px; }
-        .social-links { display: flex; gap: 15px; margin-top: 20px; }
-        .social-links a { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; color: white; font-size: 1rem; transition: all 0.3s; }
-        .social-links a:hover { color: white !important; transform: translateY(-3px); }
-        .social-links a[href*="facebook.com"]:hover { background-color: #1877F2; }
-        .social-links a[href*="twitter.com"]:hover { background-color: #000000; }
-        .social-links a[href*="linkedin.com"]:hover { background-color: #0A66C2; }
-        .social-links a[href*="instagram.com"]:hover { background-color: #C13584; }
-        .footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); color: #bbb; font-size: 0.9rem; }
-        
-        .floating-whatsapp { position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background-color: #25D366; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 2px 2px 10px rgba(0,0,0,0.2); z-index: 1000; transition: all 0.3s; text-decoration: none; }
-        .floating-whatsapp:hover { transform: scale(1.1); box-shadow: 4px 4px 15px rgba(0,0,0,0.3); }
-
-        .animate-on-scroll { opacity: 0; transform: translateY(30px); transition: all 0.6s ease; }
-        .animate-on-scroll.animated { opacity: 1; transform: translateY(0); }
-        
-        /* Responsive Styles */
-        @media (max-width: 992px) {
-            .hero h1 { font-size: 2.8rem; }
-            .contact-container { grid-template-columns: 1fr; }
-        }
-        
-        @media (max-width: 768px) {
-            .mobile-menu { display: block; }
-            .nav-links { position: fixed; top: 80px; left: -100%; width: 100%; height: calc(100vh - 80px); background: white; flex-direction: column; align-items: center; padding: 40px 0; transition: all 0.5s ease; }
-            header.scrolled .nav-links { top: 70px; height: calc(100vh - 70px); }
-            .nav-links.active { left: 0; }
-            .nav-links li { margin: 15px 0; }
-            .hero h1 { font-size: 2.5rem; }
-            
-            /* --- MODIFICATION: Image First on Mobile --- */
-            .about-content {
-                flex-direction: column-reverse; /* This flips the order on mobile */
-            }
-            .about-text {
-                padding-right: 0;
-                margin-top: 40px; /* Use margin-top since text is now second */
-                margin-bottom: 0;
-            }
-
-            .floating-whatsapp { width: 50px; height: 50px; font-size: 1.5rem; bottom: 20px; right: 20px; }
-        }
-        
-        @media (max-width: 576px) {
-            .hero h1 { font-size: 2rem; }
-            .hero p { font-size: 1rem; }
-            .btn { display: block; width: 100%; margin-bottom: 15px; }
-            .btn-outline { margin-left: 0; }
-            .section-title h2 { font-size: 2rem; }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
     <header id="header">
         <div class="container">
             <nav>
-                <a href="index.html" class="logo" style="text-decoration: none;">
+                <a href="index.html" class="logo">
                     <h1>Sunshine<span>Polymers</span></h1>
                 </a>
                 <ul class="nav-links">
@@ -331,7 +32,6 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-bg-slider">
             <div class="hero-bg"></div>
@@ -340,7 +40,6 @@
             <div class="hero-bg"></div>
         </div>
         <div class="hero-overlay"></div>
-
         <div class="container">
             <div class="hero-content">
                 <h1>India's Trusted Plastic Granules Manufacturer</h1>
@@ -351,13 +50,11 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section class="section" id="about">
         <div class="container">
             <div class="section-title">
                 <h2>About Us</h2>
             </div>
-            <!-- The order in HTML is text then image -->
             <div class="about-content">
                 <div class="about-text animate-on-scroll">
                     <h3>Sustainable. Strong. Trusted. Plastic Granules That Last.</h3>
@@ -367,13 +64,12 @@
                     <a href="about.html" class="btn">Learn More About Us</a>
                 </div>
                 <div class="about-image animate-on-scroll">
-                    <img src="images/factory (2).jpg" alt="Sunshine Polymers Factory in Pune">
+                    <img src="images/factory (2).jpg" alt="Sunshine Polymers Factory in Pune" loading="lazy" width="800" height="533">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
     <section class="section features" id="why-us"> 
         <div class="container">
             <div class="section-title">
@@ -404,7 +100,6 @@
         </div>
     </section>
 
-    <!-- Products Section -->
     <section class="section" id="products">
         <div class="container">
             <div class="section-title">
@@ -412,7 +107,7 @@
             </div>
             <div class="products-grid">
                 <div class="product-card animate-on-scroll">
-                    <div class="product-image"><img src="images/HDPE.jpg" alt="HDPE Granules"></div>
+                    <div class="product-image"><img src="images/HDPE.jpg" alt="HDPE Granules" loading="lazy" width="400" height="400"></div>
                     <div class="product-info">
                         <h3>HDPE Granules</h3>
                         <p>Durable, high-density polyethylene for pipes, containers, and industrial applications.</p>
@@ -420,7 +115,7 @@
                     </div>
                 </div>
                 <div class="product-card animate-on-scroll" style="transition-delay: 0.2s;">
-                    <div class="product-image"><img src="images/LLDPE.jpg" alt="LDPE Granules"></div>
+                    <div class="product-image"><img src="images/LLDPE.jpg" alt="LDPE Granules" loading="lazy" width="400" height="400"></div>
                     <div class="product-info">
                         <h3>LDPE Granules</h3>
                         <p>Flexible, low-density polyethylene ideal for film applications, bags, and liners.</p>
@@ -428,7 +123,7 @@
                     </div>
                 </div>
                 <div class="product-card animate-on-scroll" style="transition-delay: 0.4s;">
-                    <div class="product-image"><img src="images/PP.jpg" alt="PP Granules"></div>
+                    <div class="product-image"><img src="images/PP.jpg" alt="PP Granules" loading="lazy" width="400" height="400"></div>
                     <div class="product-info">
                         <h3>PP Granules</h3>
                         <p>Versatile Polypropylene with excellent heat resistance for automotive and household goods.</p>
@@ -436,7 +131,7 @@
                     </div>
                 </div>
                 <div class="product-card animate-on-scroll" style="transition-delay: 0.6s;">
-                    <div class="product-image"><img src="images/Plastic Scrap.jpg" alt="Recycled Plastic Scrap"></div>
+                    <div class="product-image"><img src="images/Plastic Scrap.jpg" alt="Recycled Plastic Scrap" loading="lazy" width="400" height="400"></div>
                     <div class="product-info">
                         <h3>Plastic Scrap</h3>
                         <p>High-quality, sorted plastic scrap for recycling and reprocessing industries.</p>
@@ -450,33 +145,30 @@
         </div>
     </section>
 
-    <!-- Quality Section -->
     <section class="section" id="quality">
         <div class="container">
             <div class="section-title">
                 <h2>Quality & Standards</h2>
             </div>
-            <!-- The order in HTML is text then image -->
             <div class="about-content">
                 <div class="about-text animate-on-scroll">
                     <h3>Our Commitment to Excellence</h3>
                     <p>At Sunshine Polymers, quality isn't just a process - it's our promise. Our quality assurance program begins with raw material selection and continues through every stage of production until final packaging.</p>
                     <p>Our in-house laboratory conducts rigorous testing on every batch to ensure consistent quality parameters, guaranteeing that you receive materials you can trust for your manufacturing needs.</p>
                     <div class="quality-features">
-                        <p><i class="fas fa-check-circle" style="color: var(--secondary);"></i> Melt Flow Index (MFI) Testing</p>
-                        <p><i class="fas fa-check-circle" style="color: var(--secondary);"></i> Density & Strength Checks</p>
-                        <p><i class="fas fa-check-circle" style="color: var(--secondary);"></i> Color Consistency Verification</p>
+                        <p><i class="fas fa-check-circle"></i> Melt Flow Index (MFI) Testing</p>
+                        <p><i class="fas fa-check-circle"></i> Density & Strength Checks</p>
+                        <p><i class="fas fa-check-circle"></i> Color Consistency Verification</p>
                     </div>
                      <a href="quality.html" class="btn" style="margin-top: 20px;">Our Quality Process</a>
                 </div>
                 <div class="about-image animate-on-scroll">
-                    <img src="images/quality.jpg" alt="Quality control lab for plastic granules">
+                    <img src="images/quality.jpg" alt="Quality control lab for plastic granules" loading="lazy" width="800" height="533">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section class="section contact" id="contact">
         <div class="container">
             <div class="section-title">
@@ -508,7 +200,7 @@
                                 <a href="mailto:sunshinepolymers1@gmail.com"><p>sunshinepolymers1@gmail.com</p></a>
                             </div>
                         </div>
-                        <div class="contact-item">
+                         <div class="contact-item">
                             <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
                             <div>
                                 <h4>WhatsApp</h4>
@@ -524,7 +216,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -568,7 +259,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2024 Sunshine Polymers. All Rights Reserved.</p>
+                <p>© 2025 Sunshine Polymers. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
@@ -576,47 +267,7 @@
     <a href="https://wa.me/918530441195" class="floating-whatsapp" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-whatsapp"></i>
     </a>
-
-
-    <!-- JavaScript -->
-    <script>
-        const mobileMenu = document.querySelector('.mobile-menu');
-        const navLinks = document.querySelector('.nav-links');
-        const header = document.getElementById('header');
-        
-        mobileMenu.addEventListener('click', () => {
-            const isMenuOpen = navLinks.classList.toggle('active');
-            mobileMenu.querySelector('i').classList.toggle('fa-bars', !isMenuOpen);
-            mobileMenu.querySelector('i').classList.toggle('fa-times', isMenuOpen);
-        });
-        
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                if(window.innerWidth <= 768) {
-                    navLinks.classList.remove('active');
-                    mobileMenu.querySelector('i').classList.add('fa-bars');
-                    mobileMenu.querySelector('i').classList.remove('fa-times');
-                }
-            });
-        });
-        
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-        
-        const animateElements = document.querySelectorAll('.animate-on-scroll');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animated');
-                }
-            });
-        }, { threshold: 0.1 });
-        animateElements.forEach(element => { observer.observe(element); });
-    </script>
+    
+    <script src="script.js" defer></script>
 </body>
 </html>
