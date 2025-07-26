@@ -1,3 +1,4 @@
+<!-- ---- START OF FILE: products.html ---- -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,102 +9,13 @@
     <link rel="icon" href="data:,"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #2962FF;
-            --secondary: #00BFA5;
-            --accent: #FF6D00;
-            --dark: #263238;
-            --light: #ECEFF1;
-        }
-        
-        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-        body { font-family: 'Poppins', sans-serif; color: var(--dark); line-height: 1.6; overflow-x: hidden; }
-        
-        header { background-color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: fixed; width: 100%; z-index: 1000; transition: all 0.3s ease; }
-        header.scrolled { padding: 10px 0; background-color: rgba(255,255,255,0.98); }
-        .container { width: 90%; max-width: 1200px; margin: 0 auto; }
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; }
-        .logo { display: flex; align-items: center; }
-        .logo img { height: 50px; margin-right: 10px; }
-        .logo h1 { font-size: 1.8rem; color: var(--primary); font-weight: 700; }
-        .logo span { color: var(--accent); }
-        .nav-links { display: flex; list-style: none; }
-        .nav-links li { margin-left: 30px; }
-        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 500; transition: color 0.3s; position: relative; }
-        .nav-links a:hover, .nav-links a.active { color: var(--primary); }
-        .nav-links a:after { content: ''; position: absolute; width: 0; height: 2px; background: var(--primary); bottom: -5px; left: 0; transition: width 0.3s; }
-        .nav-links a:hover:after, .nav-links a.active:after { width: 100%; }
-        .mobile-menu { display: none; font-size: 1.5rem; cursor: pointer; }
-        
-        .page-header { height: 45vh; min-height: 350px; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; text-align: center; padding: 80px 20px 0; overflow: hidden; }
-        .page-header h1 { font-size: 3.5rem; font-weight: 700; text-shadow: 2px 2px 8px rgba(0,0,0,0.7); animation: fadeIn 1.5s ease-in-out; position: relative; z-index: 1; }
-        .page-header p { font-size: 1.3rem; font-weight: 300; margin-top: 15px; max-width: 700px; text-shadow: 1px 1px 6px rgba(0,0,0,0.7); position: relative; z-index: 1; animation: fadeIn 1.8s ease-in-out; }
-        .hero-bg-slider { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -2; }
-        .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center center; opacity: 0; animation: heroSlider 24s linear infinite; transform: scale(1.1); }
-        .hero-bg:nth-child(1) { background-image: url('images/hero1.jpg'); animation-delay: 0s; }
-        .hero-bg:nth-child(2) { background-image: url('images/hero2.jpg'); animation-delay: 6s; }
-        .hero-bg:nth-child(3) { background-image: url('images/hero3.jpg'); animation-delay: 12s; }
-        .hero-bg:nth-child(4) { background-image: url('images/hero4.jpg'); animation-delay: 18s; }
-        .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); z-index: -1; }
-        @keyframes heroSlider { 0% { opacity: 0; transform: scale(1.1); } 8% { opacity: 1; } 33% { opacity: 1; transform: scale(1.2); } 41% { opacity: 0; } 100% { opacity: 0; } }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-
-        .section { padding: 100px 0; }
-        .product-entry { display: flex; flex-wrap: wrap; align-items: center; gap: 50px; margin-bottom: 80px; }
-        .product-entry:last-child { margin-bottom: 0; }
-        .product-entry.reverse { flex-direction: row-reverse; }
-        .product-image { flex: 1; min-width: 300px; overflow: hidden; border-radius: 10px; }
-        .product-image img { width: 100%; display: block; border-radius: 10px; box-shadow: 0 15px 30px rgba(0,0,0,0.15); transition: transform 0.4s ease; }
-        .product-image img:hover { transform: scale(1.05); }
-        .product-details { flex: 1.2; min-width: 300px; }
-        .product-details h3 { font-size: 2.2rem; color: var(--primary); margin-bottom: 20px; }
-        .product-details p { margin-bottom: 15px; }
-        .product-features { list-style: none; margin-top: 20px; }
-        .product-features li { margin-bottom: 10px; font-weight: 500; }
-        .product-features i { color: var(--secondary); margin-right: 12px; font-size: 1.1rem; }
-        
-        footer { background: var(--dark); color: white; padding: 60px 0 20px; }
-        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-bottom: 40px; }
-        .footer-column h3 { font-size: 1.3rem; margin-bottom: 20px; color: white; position: relative; padding-bottom: 10px; }
-        .footer-column h3:after { content: ''; position: absolute; width: 40px; height: 2px; background: var(--secondary); bottom: 0; left: 0; }
-        .footer-links { list-style: none; } .footer-links li { margin-bottom: 10px; }
-        .footer-links a, .footer-contact-item { color: #bbb; text-decoration: none; transition: color 0.3s, padding-left 0.3s; }
-        .footer-links a:hover { color: white; padding-left: 5px; } .footer-links a::before { content: '→'; margin-right: 8px; opacity: 0.7; transition: margin-right 0.3s; }
-        .footer-links a:hover::before { margin-right: 12px; } .footer-links i { margin-right: 8px; }
-        .social-links { display: flex; gap: 15px; margin-top: 20px; }
-        .social-links a { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; color: white; font-size: 1rem; transition: all 0.3s; }
-        .social-links a:hover { color: white !important; transform: translateY(-3px); }
-        .footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); color: #bbb; font-size: 0.9rem; }
-        
-        .floating-whatsapp { position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background-color: #25D366; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 2px 2px 10px rgba(0,0,0,0.2); z-index: 1000; transition: all 0.3s; text-decoration: none; }
-        .floating-whatsapp:hover { transform: scale(1.1); box-shadow: 4px 4px 15px rgba(0,0,0,0.3); }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .mobile-menu { display: block; }
-            .nav-links { position: fixed; top: 80px; left: -100%; width: 100%; height: calc(100vh - 80px); background: white; flex-direction: column; align-items: center; padding: 40px 0; transition: all 0.5s ease; }
-            header.scrolled .nav-links { top: 70px; height: calc(100vh - 70px); }
-            .nav-links.active { left: 0; }
-            .nav-links li { margin: 15px 0; }
-            .page-header h1 { font-size: 2.5rem; }
-            .page-header p { font-size: 1.1rem; }
-            
-            /* --- MODIFICATION: Image First on Mobile --- */
-            .product-entry, .product-entry.reverse { 
-                flex-direction: column; 
-                gap: 30px;
-            }
-            .floating-whatsapp { width: 50px; height: 50px; font-size: 1.5rem; bottom: 20px; right: 20px; }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
     <header id="header">
         <div class="container">
             <nav>
-                <a href="index.html" class="logo" style="text-decoration: none;">
+                <a href="index.html" class="logo">
                     <h1>Sunshine<span>Polymers</span></h1>
                 </a>
                 <ul class="nav-links">
@@ -120,7 +32,6 @@
         </div>
     </header>
 
-    <!-- Page Header -->
     <section class="page-header">
         <div class="hero-bg-slider">
             <div class="hero-bg"></div>
@@ -133,15 +44,10 @@
         <p>A look at our high-grade recycled plastic granules and raw materials for every industrial need.</p>
     </section>
 
-    <!-- Main Products Section -->
     <section class="section" id="products-list">
         <div class="container">
-
-            <!-- The HTML source order is always image then text. The `.reverse` class only affects desktop view. -->
-
-            <!-- Product 1: HDPE Granules -->
             <div class="product-entry">
-                <div class="product-image"><img src="images/HDPE.jpg" alt="High-quality HDPE Granules"></div>
+                <div class="product-image"><img src="images/HDPE.jpg" alt="High-quality HDPE Granules" loading="lazy" width="800" height="800"></div>
                 <div class="product-details">
                     <h3>High-Density Polyethylene (HDPE) Granules</h3>
                     <p>HDPE is renowned for its exceptional strength-to-density ratio. Our recycled HDPE granules are resistant to chemicals and ideal for robust products like pipes, jerry cans, industrial drums, and crates.</p>
@@ -153,9 +59,8 @@
                 </div>
             </div>
 
-            <!-- Product 2: LDPE Granules -->
             <div class="product-entry reverse">
-                <div class="product-image"><img src="images/IDPE.jpg" alt="Flexible LDPE Granules"></div>
+                <div class="product-image"><img src="images/IDPE.jpg" alt="Flexible LDPE Granules" loading="lazy" width="800" height="800"></div>
                 <div class="product-details">
                     <h3>Low-Density Polyethylene (LDPE) Granules</h3>
                     <p>LDPE is a soft, flexible, and lightweight material. Our premium reprocessed LDPE granules are perfect for manufacturing clear or colored plastic bags, food wrap films, liners, and flexible squeeze bottles.</p>
@@ -167,9 +72,8 @@
                 </div>
             </div>
             
-            <!-- Product 3: PP Granules -->
             <div class="product-entry">
-                <div class="product-image"><img src="images/PP.jpg" alt="White PP Granules from our factory"></div>
+                <div class="product-image"><img src="images/PP.jpg" alt="White PP Granules from our factory" loading="lazy" width="800" height="800"></div>
                 <div class="product-details">
                     <h3>Polypropylene (PP) Granules</h3>
                     <p>Polypropylene is a highly versatile thermoplastic known for its excellent chemical resistance, high heat tolerance, and rigidity. We supply high-quality reprocessed PP granules suitable for injection molding.</p>
@@ -181,9 +85,8 @@
                 </div>
             </div>
 
-            <!-- Product 4: LLDPE Granules -->
             <div class="product-entry reverse">
-                <div class="product-image"><img src="images/LLDPE.jpg" alt="Clear LLDPE Granules for film"></div>
+                <div class="product-image"><img src="images/LLDPE.jpg" alt="Clear LLDPE Granules for film" loading="lazy" width="800" height="800"></div>
                 <div class="product-details">
                     <h3>Linear Low-Density Polyethylene (LLDPE) Granules</h3>
                     <p>LLDPE stands out for its superior flexibility and high puncture resistance, making it the preferred material for high-performance films. We provide top-grade granules for stretch wrap, agricultural films, and heavy-duty sacks.</p>
@@ -195,9 +98,8 @@
                 </div>
             </div>
 
-            <!-- Product 5: Plastic Scrap -->
             <div class="product-entry">
-                <div class="product-image"><img src="images/Plastic Scrap.jpg" alt="plastic scrap material"></div>
+                <div class="product-image"><img src="images/Plastic Scrap.jpg" alt="plastic scrap material" loading="lazy" width="800" height="800"></div>
                 <div class="product-details">
                     <h3>Sorted Plastic Scrap</h3>
                     <p>We source and process high-quality post-industrial and post-consumer plastic scrap. This scrap is meticulously sorted, cleaned, and shredded to serve as a valuable raw material for reprocessing and a circular economy.</p>
@@ -209,10 +111,60 @@
                 </div>
             </div>
 
+            <div class="product-entry reverse">
+                <div class="product-image"><img src="images/black ld.jpg" alt="Flexible Black LDPE Granules" loading="lazy" width="800" height="800"></div>
+                <div class="product-details">
+                    <h3>Reprocessed Black LD Plastic Granules</h3>
+                    <p>Our black LDPE granules are made from high-quality recycled materials, offering excellent flexibility and smooth finish. They are widely used in industrial-grade films, liners, and molded products.</p>
+                    <ul class="product-features">
+                        <li><i class="fas fa-check-circle"></i>Flexible, Smooth & Uniform Finish</li>
+                        <li><i class="fas fa-check-circle"></i>Cost-effective Alternative to Virgin LDPE</li>
+                        <li><i class="fas fa-check-circle"></i>Ideal For: Film Blowing, Liners, Sheets, Non-pressure Pipes</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="product-entry">
+                <div class="product-image"><img src="images/white ld granules.jpg" alt="White plastic ld granules" loading="lazy" width="800" height="800"></div>
+                <div class="product-details">
+                    <h3>White Plastic LD Granules</h3>
+                    <p>These LDPE white granules are reprocessed with a focus on purity and brightness. Suitable for a variety of applications where appearance and surface quality matter the most.</p>
+                    <ul class="product-features">
+                        <li><i class="fas fa-check-circle"></i>High Brightness and Clean Finish</li>
+                        <li><i class="fas fa-check-circle"></i>Good Processability for Thin Films & Molding</li>
+                        <li><i class="fas fa-check-circle"></i>Ideal For: Carry Bags, Packaging Films, and Containers</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="product-entry reverse">
+                <div class="product-image"><img src="images/pigment powder.jpg" alt="Pigment powder for plastics" loading="lazy" width="800" height="800"></div>
+                <div class="product-details">
+                    <h3>Pigment Powder</h3>
+                    <p>Our high-quality pigment powders are designed to provide consistent and vibrant coloration to plastic products. They are compatible with a wide range of polymers and processes.</p>
+                    <ul class="product-features">
+                        <li><i class="fas fa-check-circle"></i>Bright & Consistent Color Output</li>
+                        <li><i class="fas fa-check-circle"></i>Excellent Dispersion in Plastic Base</li>
+                        <li><i class="fas fa-check-circle"></i>Ideal For: Injection Molding, Blow Molding, Extrusion</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="product-entry">
+                <div class="product-image"><img src="images/anti moisture powder.jpg" alt="Anti moisture powder" loading="lazy" width="800" height="800"></div>
+                <div class="product-details">
+                    <h3>Anti Moisture Powder</h3>
+                    <p>Anti Moisture Powder is used in plastic processing to absorb moisture from raw materials, improving finish and reducing defects in the final product. It's essential for reprocessed plastic granule manufacturing.</p>
+                    <ul class="product-features">
+                        <li><i class="fas fa-check-circle"></i>Reduces Pinholes & Surface Defects</li>
+                        <li><i class="fas fa-check-circle"></i>Enhances Shine & Quality of Finished Products</li>
+                        <li><i class="fas fa-check-circle"></i>Ideal For: LDPE/HDPE Reprocessing, Film & Injection Molding</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -233,10 +185,10 @@
                 <div class="footer-column">
                     <h3>Products</h3>
                     <ul class="footer-links">
-                        <li><a href="#products-list">HDPE Granules</a></li>
-                        <li><a href="#products-list">LDPE Granules</a></li>
-                        <li><a href="#products-list">PP Granules</a></li>
-                        <li><a href="#products-list">Plastic Scrap</a></li>
+                        <li><a href="products.html#products-list">HDPE Granules</a></li>
+                        <li><a href="products.html#products-list">LDPE Granules</a></li>
+                        <li><a href="products.html#products-list">PP Granules</a></li>
+                        <li><a href="products.html#products-list">Plastic Scrap</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -249,7 +201,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2024 Sunshine Polymers. All Rights Reserved.</p>
+                <p>© 2025 Sunshine Polymers. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
@@ -257,26 +209,7 @@
     <a href="https://wa.me/918530441195" class="floating-whatsapp" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-whatsapp"></i>
     </a>
-
-    <!-- JavaScript for Mobile Menu -->
-    <script>
-        const mobileMenu = document.querySelector('.mobile-menu');
-        const navLinks = document.querySelector('.nav-links');
-        mobileMenu.addEventListener('click', () => {
-            const isMenuOpen = navLinks.classList.toggle('active');
-            mobileMenu.querySelector('i').classList.toggle('fa-bars', !isMenuOpen);
-            mobileMenu.querySelector('i').classList.toggle('fa-times', isMenuOpen);
-        });
-
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                if(window.innerWidth <= 768) {
-                    navLinks.classList.remove('active');
-                    mobileMenu.querySelector('i').classList.add('fa-bars');
-                    mobileMenu.querySelector('i').classList.remove('fa-times');
-                }
-            });
-        });
-    </script>
+    
+    <script src="script.js" defer></script>
 </body>
 </html>
